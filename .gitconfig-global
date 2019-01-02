@@ -1,0 +1,5 @@
+[user]
+	name = Kelvin Mai
+	email = kelvin.mai002@gmail.com
+[credential]
+	helper = cache

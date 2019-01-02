@@ -1,0 +1,35 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dracula Soft",
+  "workbench.startupEditor": "none",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.codeLens": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.fontFamily": "Ubuntu Mono",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontFamily": "Menlo",
+  "terminal.integrated.fontSize": 14,
+  "[python]": {
+    "editor.formatOnSave": false
+  },
+  "[csharp]": {
+    "editor.formatOnSave": false
+  },
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+  "editor.formatOnSave": true,
+  "explorer.openEditors.visible": 0,
+  "files.associations": {
+    "*.pcss": "postcss",
+    "*.css": "postcss"
+  },
+  "prettier.singleQuote": true,
+  "window.zoomLevel": -1,
+  "colorize.ignore_search_variables_info": true,
+  "workbench.panel.defaultLocation": "right",
+  "terminal.external.osxExec": "Hyper.app"
+}
