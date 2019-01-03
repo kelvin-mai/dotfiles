@@ -3,3 +3,5 @@
 	email = kelvin.mai002@gmail.com
 [credential]
 	helper = cache
+[pager]
+	branch = false
