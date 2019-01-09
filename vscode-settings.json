@@ -29,5 +29,12 @@
   "window.zoomLevel": -1,
   "colorize.ignore_search_variables_info": true,
   "workbench.panel.defaultLocation": "right",
-  "terminal.external.osxExec": "Hyper.app"
+  "terminal.external.osxExec": "Hyper.app",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": "#44475a",
+  "vim.statusBarColors.insert": "#6272a4",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770"
 }
