@@ -19,7 +19,7 @@ bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -79,14 +79,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 "
+set $ws8 "8 "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -121,6 +121,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Code"] $ws2
 assign [class="Google-chrome"] $ws3
+assign [class="discord"] $ws4
+assign [class="obs"] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -136,15 +138,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+set $mode_system (e)xit, (l)ock, (s)hutdown, (r)eboot
+mode "$mode_system" { 
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym s exec --no-startup-id systemctl poweroff, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -177,60 +176,30 @@ mode "resize" {
 
 # Autostart applications
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
+exec i3-sensible-terminal
 exec google-chrome
-
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
+exec discord
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-	status_command i3status
+	
 	position top
 
 	bindsym button4 nop
 	bindsym button5 nop
-        font pongo:Ubuntu Mono 12
+        font pango:Ubuntu Mono 14
 
     colors {
-        background #202A2E
-        statusline #F9FAF9
-        separator  #454947
+        background #282A36
+        statusline #f8f8f2
+        separator  #44475a
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #202A2E #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    #                      border  backgr. text
+        focused_workspace  #8be9fd #6272a4 #f8f8f2 
+        active_workspace   #282A36 #44475A #F8F8F2
+        inactive_workspace #282A36 #282A36 #BFBFBF
+        urgent_workspace   #FF5555 #FF5555 #F8F8F2
+        binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 }
 
@@ -238,22 +207,23 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-  client.background       #2B2C2B
+
+client.background       #f8f8f2
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -2
+gaps inner 15
+gaps outer 15
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
