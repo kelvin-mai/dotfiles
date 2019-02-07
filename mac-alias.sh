@@ -1,6 +1,7 @@
 alias chrome='open -a "google chrome"'
 alias code='open -a "Visual Studio Code"'
 
+alias ls='ls -a'
 alias src='source ~/.zshrc'
 alias .zsh='code ~/.zshrc'
 alias .hyper='code ~/.hyper.js'
