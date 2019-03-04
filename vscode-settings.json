@@ -36,5 +36,17 @@
   "vim.statusBarColors.visual": "#B48EAD",
   "vim.statusBarColors.visualline": "#B48EAD",
   "vim.statusBarColors.visualblock": "#A3BE8C",
-  "vim.statusBarColors.replace": "#D08770"
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.easymotion": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<space>"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    }
+  ],
+  "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
+  "vim.easymotionMarkerYOffset": 10,
+  "vim.easymotionMarkerFontSize": "20",
+  "vim.easymotionMarkerHeight": 24,
+  "vim.easymotionMarkerWidthPerChar": 12
 }
