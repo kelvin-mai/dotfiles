@@ -4,7 +4,7 @@ config files
 
 ## Installation
 
-Coming soon...
+Coming soon... maybe...
 
 ## Not included
 

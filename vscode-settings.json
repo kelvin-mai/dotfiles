@@ -10,26 +10,10 @@
   "editor.fontSize": 18,
   "terminal.integrated.fontFamily": "Menlo",
   "terminal.integrated.fontSize": 14,
-  "[python]": {
-    "editor.formatOnSave": false
-  },
-  "[csharp]": {
-    "editor.formatOnSave": false
-  },
-  "[c]": {
-    "editor.formatOnSave": false
-  },
   "editor.formatOnSave": true,
   "explorer.openEditors.visible": 0,
-  "files.associations": {
-    "*.pcss": "postcss",
-    "*.css": "postcss"
-  },
-  "prettier.singleQuote": true,
   "window.zoomLevel": -1,
-  "colorize.ignore_search_variables_info": true,
   "workbench.panel.defaultLocation": "right",
-  "terminal.external.osxExec": "Hyper.app",
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": "#44475a",
   "vim.statusBarColors.insert": "#6272a4",
@@ -40,13 +24,27 @@
   "vim.easymotion": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<space>"],
-      "after": ["leader", "leader", "leader", "b", "d", "w"]
+      "before": [
+        "<space>"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "leader",
+        "b",
+        "d",
+        "w"
+      ]
     }
   ],
   "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
   "vim.easymotionMarkerYOffset": 10,
   "vim.easymotionMarkerFontSize": "20",
   "vim.easymotionMarkerHeight": 24,
-  "vim.easymotionMarkerWidthPerChar": 12
+  "vim.easymotionMarkerWidthPerChar": 12,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#B48EAD",
+    "statusBar.noFolderBackground": "#B48EAD",
+    "statusBar.debuggingBackground": "#B48EAD"
+  }
 }
