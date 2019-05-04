@@ -27,4 +27,6 @@ let g:lightline = {
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
+" NERDTree settings
 nnoremap <C-\> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
