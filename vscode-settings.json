@@ -5,6 +5,7 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.acceptSuggestionOnEnter": "off",
+  "editor.parameterHints.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.fontFamily": "Ubuntu Mono",
   "editor.fontSize": 18,
@@ -24,17 +25,8 @@
   "vim.easymotion": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<space>"
-      ],
-      "after": [
-        "leader",
-        "leader",
-        "leader",
-        "b",
-        "d",
-        "w"
-      ]
+      "before": ["<space>"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
     }
   ],
   "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
