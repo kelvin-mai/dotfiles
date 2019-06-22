@@ -179,6 +179,8 @@ exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec i3-sensible-terminal
 exec google-chrome
 exec discord
+exec "xset s off"
+exec "xset -dpms"
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
@@ -201,6 +203,7 @@ bar {
         urgent_workspace   #FF5555 #FF5555 #F8F8F2
         binding_mode       #FF5555 #FF5555 #F8F8F2
     }
+	status_command i3status
 }
 
 # hide/unhide i3status bar
