@@ -31,3 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Custom scripts
+export PATH="$HOME/scripts:$PATHH"
+alias mks='mkscript'

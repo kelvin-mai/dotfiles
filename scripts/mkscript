@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCRIPT_FILE="$HOME/scripts/$1" 
+
+if [[ -f $SCRIPT_FILE ]]; then
+  echo 'file already exists'
+else
+  echo '#!/bin/bash' > $SCRIPT_FILE
+  chmod +x $SCRIPT_FILE
+  nvim $SCRIPT_FILE
+fi 
+
+
