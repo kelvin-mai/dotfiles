@@ -8,14 +8,14 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+new_window pixel 3
 
 # Hide borders
 hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 3
 bindsym $mod+n border normal
 
 # start a terminal
@@ -27,7 +27,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# focus_follows_mouse no
+focus_follows_mouse no
 
 # change focus
 bindsym $mod+j focus left
@@ -61,10 +61,9 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen toggle;exec notify-send 'toggle fullscreen'
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -176,35 +175,38 @@ mode "resize" {
 
 # Autostart applications
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
-exec i3-sensible-terminal
+exec_always --no-startup-id compton
+exec_always --no-startup-id $HOME/scripts/polybarstart
+exec_always --no-startup-id $HOME/scripts/i3listen.py
+exec i3-sensible-terminal 
 exec google-chrome
 exec discord
 exec "xset s off"
 exec "xset -dpms"
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	
-	position top
-
-	bindsym button4 nop
-	bindsym button5 nop
-        font pango:Ubuntu Mono 14
-
-    colors {
-        background #282A36
-        statusline #f8f8f2
-        separator  #44475a
-
+# bar {
+#	
+#	position top
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+#        font pango:Ubuntu Mono 14
+#
+#    colors {
+#        background #282A36
+#        statusline #f8f8f2
+#        separator  #44475a
+#
     #                      border  backgr. text
-        focused_workspace  #8be9fd #6272a4 #f8f8f2 
-        active_workspace   #282A36 #44475A #F8F8F2
-        inactive_workspace #282A36 #282A36 #BFBFBF
-        urgent_workspace   #FF5555 #FF5555 #F8F8F2
-        binding_mode       #FF5555 #FF5555 #F8F8F2
-    }
-	status_command i3status
-}
+#        focused_workspace  #8be9fd #6272a4 #f8f8f2 
+#        active_workspace   #282A36 #44475A #F8F8F2
+#        inactive_workspace #282A36 #282A36 #BFBFBF
+#        urgent_workspace   #FF5555 #FF5555 #F8F8F2
+#        binding_mode       #FF5555 #FF5555 #F8F8F2
+#    }
+#	status_command i3status
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -226,7 +228,7 @@ client.background       #f8f8f2
 
 # Set inner/outer gaps
 gaps inner 15
-gaps outer 15
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
