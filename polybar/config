@@ -58,7 +58,7 @@ font-2 = siji:pixelsize=12;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem xkeyboard memory cpu temperature date 
+modules-right = filesystem xkeyboard temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -145,22 +145,6 @@ label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ff5555
-label = %percentage:2%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ff5555
-label = %percentage_used%%
 
 [module/date]
 type = internal/date
