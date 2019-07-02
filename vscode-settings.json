@@ -9,8 +9,8 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.fontFamily": "Ubuntu Mono",
   "editor.fontSize": 18,
-  "terminal.integrated.fontFamily": "Menlo",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Ubuntu Mono",
+  "terminal.integrated.fontSize": 18,
   "editor.formatOnSave": true,
   "explorer.openEditors.visible": 0,
   "window.zoomLevel": -1,
@@ -25,8 +25,17 @@
   "vim.easymotion": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<space>"],
-      "after": ["leader", "leader", "leader", "b", "d", "w"]
+      "before": [
+        "<space>"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "leader",
+        "b",
+        "d",
+        "w"
+      ]
     }
   ],
   "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
