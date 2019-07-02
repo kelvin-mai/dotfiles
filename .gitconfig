@@ -2,7 +2,7 @@
 	name = Kelvin Mai
 	email = kelvin.mai002@gmail.com
 [credential]
-	helper = cache
+	helper = store
 [pager]
 	branch = false
 [core]

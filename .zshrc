@@ -1,8 +1,8 @@
 # MacOS
-export ZSH="/Users/kelvinmai/.oh-my-zsh"
+# export ZSH="/Users/kelvinmai/.oh-my-zsh"
 
 # Linux
-export ZSH="/home/kelvin/.oh-my-zsh"
+# export ZSH="/home/kelvin/.oh-my-zsh"
 
 ZSH_THEME="dracula"
 DISABLE_AUTO_TITLE="true"
@@ -31,7 +31,3 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Custom scripts
-export PATH="$HOME/scripts:$PATHH"
-alias mks='mkscript'
