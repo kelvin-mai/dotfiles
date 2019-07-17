@@ -20,7 +20,7 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+\\",
+    "key": "ctrl+e",
     "command": "workbench.view.explorer"
   },
   {
