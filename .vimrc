@@ -26,5 +26,3 @@ let g:lightline = {
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
-
-let g:ranger_replace_netrw = 1 
