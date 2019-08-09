@@ -13,3 +13,9 @@
 [submodule ".vim/bundle/ranger.vim"]
 	path = .vim/bundle/ranger.vim
 	url = https://github.com/francoiscabrol/ranger.vim
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace
