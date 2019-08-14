@@ -1,6 +1,6 @@
 {
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dracula Soft",
+  "workbench.colorTheme": "Dracula",
   "workbench.startupEditor": "none",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -25,27 +25,13 @@
   "vim.easymotion": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<space>"
-      ],
-      "after": [
-        "leader",
-        "leader",
-        "leader",
-        "b",
-        "d",
-        "w"
-      ]
+      "before": ["<space>"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
     }
   ],
   "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
   "vim.easymotionMarkerYOffset": 10,
   "vim.easymotionMarkerFontSize": "20",
   "vim.easymotionMarkerHeight": 24,
-  "vim.easymotionMarkerWidthPerChar": 12,
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#B48EAD",
-    "statusBar.noFolderBackground": "#B48EAD",
-    "statusBar.debuggingBackground": "#B48EAD"
-  }
+  "vim.easymotionMarkerWidthPerChar": 12
 }

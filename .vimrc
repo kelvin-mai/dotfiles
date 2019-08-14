@@ -4,9 +4,6 @@ execute pathogen#infect()
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" vim plugins
-set runtimepath^=~/.vim/bundle/typescript-vim
-
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
@@ -21,7 +18,7 @@ set number
 set laststatus=2
 set noshowmode
 let g:lightline = {
-	\ 'colorscheme':'seoul256',
+	\ 'colorscheme':'dracula',
 	\ }
 
 " Enable file type detection and do language-dependent indenting.

@@ -1,21 +1,12 @@
-[submodule ".vim/bundle/typescript-vim"]
-	path = .vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule ".vim/bundle/lightline.vim"]
-	path = .vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "Mailspring-dracula-theme"]
 	path = Mailspring-Dracula-theme
 	url = https://github.com/kelvin-mai/Mailspring-Dracula-theme.git
-[submodule ".vim/bundle/ranger.vim"]
-	path = .vim/bundle/ranger.vim
-	url = https://github.com/francoiscabrol/ranger.vim
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule ".vim/bundle/vim-fireplace"]
 	path = .vim/bundle/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace
+[submodule "ubuntu-font"]
+	path = ubuntu-font
+	url = https://github.com/mariomc/ubuntu-font
