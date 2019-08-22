@@ -3,11 +3,11 @@
 let g:dracula#palette           = {}
 let g:dracula#palette.fg        = ['#F8F8F2', 253]
 
-let g:dracula#palette.bglighter = ['#424450', 238]
-let g:dracula#palette.bglight   = ['#343746', 237]
-let g:dracula#palette.bg        = ['#282A36', 236]
-let g:dracula#palette.bgdark    = ['#21222C', 235]
-let g:dracula#palette.bgdarker  = ['#191A21', 234]
+let g:dracula#palette.bglighter = ['#424450', 237]
+let g:dracula#palette.bglight   = ['#343746', 236]
+let g:dracula#palette.bg        = ['#282A36', 235]
+let g:dracula#palette.bgdark    = ['#21222C', 234]
+let g:dracula#palette.bgdarker  = ['#191A21', 233]
 
 let g:dracula#palette.comment   = ['#6272A4',  61]
 let g:dracula#palette.selection = ['#44475A', 239]
