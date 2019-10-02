@@ -1,6 +1,5 @@
 {
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dracula",
   "workbench.startupEditor": "none",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -8,30 +7,39 @@
   "editor.parameterHints.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.fontFamily": "Ubuntu Mono",
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "terminal.integrated.fontFamily": "Ubuntu Mono",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
   "editor.formatOnSave": true,
   "explorer.openEditors.visible": 0,
   "window.zoomLevel": -1,
-  "workbench.panel.defaultLocation": "right",
+  "bracket-pair-colorizer-2.colors": ["#8FB5FE", "#FFFFFF", "#91DC47"],
+  "bracket-pair-colorizer-2.unmatchedScopeColor": "#FF5555",
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": "#44475a",
-  "vim.statusBarColors.insert": "#6272a4",
-  "vim.statusBarColors.visual": "#B48EAD",
-  "vim.statusBarColors.visualline": "#B48EAD",
-  "vim.statusBarColors.visualblock": "#A3BE8C",
-  "vim.statusBarColors.replace": "#D08770",
-  "vim.easymotion": true,
+  "vim.statusBarColors.normal": "#bd93f9",
+  "vim.statusBarColors.insert": "#00FF9C",
+  "vim.statusBarColors.visual": "#ffb86c",
+  "vim.statusBarColors.visualblock": "#ffb86c",
+  "vim.statusBarColors.visualline": "#ffb86c",
+  "vim.statusBarColors.replace": "#ff5555",
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<space>"],
-      "after": ["leader", "leader", "leader", "b", "d", "w"]
+      "before": ["<C-e>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDefinition"]
     }
   ],
-  "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
-  "vim.easymotionMarkerYOffset": 10,
-  "vim.easymotionMarkerFontSize": "20",
-  "vim.easymotionMarkerHeight": 24,
-  "vim.easymotionMarkerWidthPerChar": 12
+  "vim.visualModeKeyBindings": [],
+  "editor.lineNumbers": "relative"
 }
