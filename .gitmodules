@@ -1,6 +1,3 @@
-[submodule "Mailspring-dracula-theme"]
-	path = Mailspring-Dracula-theme
-	url = https://github.com/kelvin-mai/Mailspring-Dracula-theme.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
