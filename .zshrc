@@ -1,9 +1,10 @@
 # MacOS
-# export ZSH="/Users/kelvinmai/.oh-my-zsh"
+# export HOME="/Users/kelvinmai"
 
 # Linux
-# export ZSH="/home/kelvin/.oh-my-zsh"
+# export HOME="/home/kelvin"
 
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="dracula"
 DISABLE_AUTO_TITLE="true"
 
