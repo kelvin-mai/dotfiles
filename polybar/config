@@ -27,13 +27,13 @@ primary = #8be9fd
 secondary = #ffb86c
 alert = #bd93f9
 
-[bar/example]
+[bar/master]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 35
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0
 fixed-center = true
 
 background = ${colors.background}
@@ -47,7 +47,7 @@ border-bottom-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 2
@@ -57,12 +57,6 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=12;1
 
 modules-left = i3
-modules-center = xwindow
-modules-right = filesystem xkeyboard temperature date 
-
-tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -79,9 +73,25 @@ enable-ipc = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[bar/right]
+inherit = bar/master
+monitor = HDMI-1
+
+modules-right = date
+
+[bar/left]
+inherit = bar/master
+monitor = DVI-D-1
+
+modules-right = filesystem
+
+tray-position = right
+tray-padding = 2
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+;tray-background = #0063ff
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -116,7 +126,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #fff
