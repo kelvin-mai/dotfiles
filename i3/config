@@ -169,7 +169,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+` mode "$mode_system"
+bindsym $mod+grave mode "$mode_system"
 set $mode_system (e)xit, (l)ock, (s)hutdown, (r)eboot
 mode "$mode_system" { 
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
