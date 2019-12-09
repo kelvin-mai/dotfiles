@@ -6,8 +6,12 @@
 [pager]
 	branch = false
 [core]
-	editor = vim 
+	editor = nvim 
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
+[difftool]
+	prompt = false
