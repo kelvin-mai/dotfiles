@@ -1,6 +1,21 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# multiple monitors
+set $primary HDMI-1
+set $secondary DVI-D-1
+
+workspace 1 output $primary
+workspace 2 output $primary
+workspace 3 output $primary
+workspace 4 output $primary
+workspace 5 output $primary
+workspace 6 output $secondary
+workspace 7 output $secondary
+workspace 8 output $secondary
+workspace 9 output $secondary
+workspace 10 output $secondary
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -20,6 +35,9 @@ bindsym $mod+n border normal
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+# start a browser
+bindsym $mod+Shift+Return exec /usr/bin/x-www-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -78,18 +96,23 @@ bindsym $mod+Ctrl+h workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+#script bindings
+bindsym $mod+c exec --no-startup-id ~/scripts/camtoggle
+
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
-set $ws5 "5 "
-set $ws6 "6 "
-set $ws7 "7 "
-set $ws8 "8 "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -100,6 +123,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -110,6 +135,8 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+0 move container to workspace $ws10
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -120,12 +147,14 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
-assign [class="Code"] $ws2
-assign [class="Google-chrome"] $ws3
-assign [class="discord"] $ws4
-assign [class="obs"] $ws8
+assign [class="discord"] $ws7
+assign [class="slack"] $ws6
+assign [class="obs"] $ws9
+assign [class="Thunderbird"] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -140,7 +169,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+grave mode "$mode_system"
 set $mode_system (e)xit, (l)ock, (s)hutdown, (r)eboot
 mode "$mode_system" { 
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
@@ -180,20 +209,22 @@ mode "resize" {
 }
 
 # Autostart applications
+exec_always xrandr --output "HDMI-1" --auto --output "DVI-D-1" --left-of "HDMI-1"
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id compton
 exec_always --no-startup-id $HOME/scripts/polybarstart
 exec_always --no-startup-id $HOME/scripts/i3listen.py
 exec i3-sensible-terminal 
-exec google-chrome
 exec discord
+exec thunderbird
 exec "xset s off"
 exec "xset -dpms"
+exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # bar {
 #	
-#	position top
+# 	position top
 #
 #	bindsym button4 nop
 #	bindsym button5 nop
@@ -232,8 +263,8 @@ client.background       #f8f8f2
 #############################
 
 # Set inner/outer gaps
-gaps inner 15
-gaps outer 0
+gaps inner 14
+gaps outer 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -286,3 +317,4 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"	
 	bindsym Control+C mode "default"
 }
+
