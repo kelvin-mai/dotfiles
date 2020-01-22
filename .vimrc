@@ -29,3 +29,7 @@ filetype plugin indent on
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
+
+" Ignore whitespace in diff
+set diffopt+=iwhite
+
