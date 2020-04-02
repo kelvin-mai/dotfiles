@@ -1,4 +1,0 @@
-#!/bin/bash
-$1 || $1=2
-# xrandr --output HDMI-1 --mode 1280x720
-i3-msg "workspace $1;append_layout ~/scripts/layouts/work.json"
