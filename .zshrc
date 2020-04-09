@@ -5,6 +5,10 @@ export HOME="/home/kelvin"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Store current directory
+export PROMPT_COMMAND="pwd > /tmp/whereami"
+precmd() { eval "$PROMPT_COMMAND" }
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,3 +110,4 @@ alias cdp='cd $HOME/dev/projects'
 alias cdt='cd $HOME/dev/tutorials'
 
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/flutter/bin:$PATH"

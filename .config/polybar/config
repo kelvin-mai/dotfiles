@@ -75,13 +75,13 @@ cursor-scroll = ns-resize
 
 [bar/right]
 inherit = bar/master
-monitor = HDMI-1
+monitor = HDMI-0
 
 modules-right = date
 
 [bar/left]
 inherit = bar/master
-monitor = DVI-D-1
+monitor = DVI-D-0
 
 modules-right = filesystem
 

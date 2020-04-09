@@ -2,8 +2,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # monitors
-set $primary HDMI-1
-set $secondary DVI-D-1
+set $primary HDMI-0
+set $secondary DVI-D-0
 
 workspace 1 output $primary
 workspace 2 output $primary
@@ -43,7 +43,7 @@ font xft:Ubuntu Mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $HOME/.i3/i3pwd.sh
 
 # start a browser
 bindsym $mod+Shift+Return exec default_browser
@@ -209,10 +209,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
+assign [class="Shotcut"] $ws8
+assign [class="obs"] $ws9
+assign [class="Thunderbird"] $ws0
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -242,7 +241,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-
+for_window [title="Android Emulator - pixel2:5554"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -292,92 +291,22 @@ mode "resize" {
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
-	bindsym Control+C mode "default"
+      	bindsym Control+C mode "default"
 }
-
-# Lock screen
-# bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 exec --no-startup-id pulseaudio
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id thunderbird
+# exec --no-startup-id start_conky_maia
+# exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.i3/polybar.sh
-
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-#bar {
-#	i3bar_command i3bar
-#	status_command i3status
-#	position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-#	bindsym button4 nop
-#	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-#	strip_workspace_numbers yes
-
-#   colors {
-#        background #222D31
-#        statusline #F9FAF9
-#        separator  #454947
-
-#                      border  backgr. text
-#        focused_workspace  #F9FAF9 #16a085 #292F34
-#        active_workspace   #595B5B #353836 #FDF6E3
-#        inactive_workspace #595B5B #222D31 #EEE8D5
-#        binding_mode       #16a085 #2C2C2C #F9FAF9
-#        urgent_workspace   #16a085 #FDF6E3 #E5201D
-#    }
-#}
-
-# hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  bground text    indicator child_border
