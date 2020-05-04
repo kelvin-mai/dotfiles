@@ -110,4 +110,12 @@ alias cdp='cd $HOME/dev/projects'
 alias cdt='cd $HOME/dev/tutorials'
 
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# Flutter
 export PATH="$HOME/flutter/bin:$PATH"
+
+# DOTNET 
+export PATH="$PATH:$HOME/.dotnet/tools"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export ASPNETCORE_ENVIRONMENT=Development

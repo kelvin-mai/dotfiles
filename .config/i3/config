@@ -307,6 +307,7 @@ exec --no-startup-id thunderbird
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.i3/polybar.sh
+exec --no-startup-id ~/.i3/i3pwd.sh
 
 # Theme colors
 # class                 border  bground text    indicator child_border
