@@ -31,5 +31,5 @@ cp .config/polybar/config $POLYBAR_DIR/config
 echo "updating $ALACRITTY_DIR"
 cp .config/alacritty/alacritty.yml $ALACRITTY_DIR/alacritty.yml
 
-echo "updating $HOME/.config/compton.conf"
-cp .config/compton.conf $HOME/.config/compton.conf
+echo "updating $HOME/.config/picom.conf"
+cp .config/picom.conf $HOME/.config/picom.conf
