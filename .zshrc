@@ -119,3 +119,7 @@ export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export ASPNETCORE_ENVIRONMENT=Development
+
+# deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"

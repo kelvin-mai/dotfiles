@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/kelvin/.config/nvim'
+let g:netrw_dirhist_2='/home/kelvin/dev/projects/website/src/pages'
+let g:netrw_dirhist_1='/home/kelvin/dev/projects/website/src'
+let g:netrw_dirhist_0='/home/kelvin/dev/projects/website'
+let g:netrw_dirhist_9='/home/kelvin/dev/projects/website/src'
+let g:netrw_dirhist_8='/home/kelvin/dev/projects/website'
+let g:netrw_dirhist_7='/home/kelvin/dev/projects/website/public'
+let g:netrw_dirhist_6='/home/kelvin/dev/projects/website'
+let g:netrw_dirhist_5='/home/kelvin/.config/nvim'
+let g:netrw_dirhist_4='/home/kelvin/dev/projects/reason-music-player'
