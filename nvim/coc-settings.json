@@ -13,6 +13,13 @@
     "typescriptreact",
     "reason"
   ],
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<CR>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,

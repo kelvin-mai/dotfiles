@@ -1,12 +1,6 @@
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule ".vim/bundle/vim-fireplace"]
-	path = .vim/bundle/vim-fireplace
-	url = https://github.com/tpope/vim-fireplace
 [submodule "ubuntu-font"]
 	path = ubuntu-font
 	url = https://github.com/mariomc/ubuntu-font
-[submodule ".vim/bundle/vim-polyglot"]
-	path = .vim/bundle/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "ranger/plugins/ranger_devicons"]
+  path = ranger/plugins/ranger_devicons
+  url = https://github.com/alexanderjeurissen/ranger_devicons

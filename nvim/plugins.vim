@@ -8,13 +8,12 @@ Plug 'maxmellon/vim-jsx-pretty'         " js / jsx
 Plug 'ianks/vim-tsx'                    " tsx
 Plug 'jparise/vim-graphql'              " graphql
 Plug 'reasonml-editor/vim-reason-plus'  " reasonml
-" File tree explorer
-Plug 'scrooloose/NERDTree'
 " Bracket and parens
-Plug 'chun-yang/auto-pairs'
-Plug 'luochen1990/rainbow'
-" Adds command to surround selection with stuff
-Plug 'tpope/vim-surround'
+Plug 'chun-yang/auto-pairs'             " automatic paren completion
+Plug 'luochen1990/rainbow'              " rainbow parens
+Plug 'tpope/vim-surround'               " add command to create surrounding parens
+" File tree explorer
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } } 
 " Code formatting
