@@ -1,9 +1,12 @@
 " Plugins
 source $HOME/.config/nvim/plugins.vim
 
-" Configurations
-source $HOME/.config/nvim/settings.vim
-source $HOME/.config/nvim/keybindings.vim
+" Plugin configurations
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/prettier.vim
+source $HOME/.config/nvim/plugins/rainbow.vim
+
+" User settings 
+source $HOME/.config/nvim/settings.vim
+source $HOME/.config/nvim/keybindings.vim

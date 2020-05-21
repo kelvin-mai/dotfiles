@@ -10,8 +10,9 @@ Plug 'jparise/vim-graphql'              " graphql
 Plug 'reasonml-editor/vim-reason-plus'  " reasonml
 " File tree explorer
 Plug 'scrooloose/NERDTree'
-" Automatic pairing of brackets and quotes
+" Bracket and parens
 Plug 'chun-yang/auto-pairs'
+Plug 'luochen1990/rainbow'
 " Adds command to surround selection with stuff
 Plug 'tpope/vim-surround'
 " Intellisense

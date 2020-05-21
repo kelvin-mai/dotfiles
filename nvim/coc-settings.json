@@ -17,6 +17,6 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   // javascript and typescript config
-  "tsserver.enable": false,
+  "tsserver.enable": true,
   "tsserver.enableJavascript": true
 }
