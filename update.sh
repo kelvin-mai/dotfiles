@@ -15,6 +15,7 @@ echo "updating user interface"
 cp -TRv i3 $CONFIG_TARGET/i3
 cp -TRv polybar $CONFIG_TARGET/polybar
 cp -TRv alacritty $CONFIG_TARGET/alacritty
+cp -TRv rofi $CONFIG_TARGET/rofi
 cp picom.conf $CONFIG_TARGET/picom.conf
 
 echo "updating editors"
