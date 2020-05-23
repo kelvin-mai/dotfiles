@@ -1,13 +1,6 @@
-" Plugins
-source $HOME/.config/nvim/plugins.vim
+if exists('g:vscode')
+  source $HOME/.config/nvim/vscode/settings.vim  
+else
+  source $HOME/.config/nvim/vim/settings.vim
+endif
 
-" Plugin configurations
-source $HOME/.config/nvim/plugins/coc.vim
-source $HOME/.config/nvim/plugins/lightline.vim
-source $HOME/.config/nvim/plugins/prettier.vim
-source $HOME/.config/nvim/plugins/rainbow.vim
-source $HOME/.config/nvim/plugins/rnvimr.vim
-
-" User settings 
-source $HOME/.config/nvim/settings.vim
-source $HOME/.config/nvim/keybindings.vim

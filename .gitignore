@@ -1,1 +1,3 @@
 nvim/autoload/plugged/*
+nvim/.lsp/
+nvim/.netrwhist
