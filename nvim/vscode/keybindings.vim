@@ -12,9 +12,20 @@ nnoremap q :q<CR>
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
 
+" Simulate show documentation
+nmap K :call VSCodeNotify('editor.action.showHover')<CR>
+
+" VSCode comments acts like vim-commentary
+xmap gc  <Plug>VSCodeCommentary
+nmap gc  <Plug>VSCodeCommentary
+omap gc  <Plug>VSCodeCommentary
+nmap gcc <Plug>VSCodeCommentaryLine
+
 " Make calva act like fireplace
-nmap cpr :call VSCodeNotify('calva.jackIn')<CR>
-nmap cpR :call VSCodeNotify('calva.disconnect')<CR>
+nmap cqp :call VSCodeNotify('calva.jackIn')<CR>
+nmap cqq :call VSCodeNotify('calva.disconnect')<CR>
+nmap cpr :call VSCodeNotify('calva.loadFile')<CR>
+nmap cpR :call VSCodeNotify('calva.loadNamespace')<CR>
 nmap cpp :call VSCodeNotify('calva.evaluateSelection')<CR>
 nmap cqc :call VSCodeNotify('calva.evalCurrentFormInREPLWindow')<CR>
 

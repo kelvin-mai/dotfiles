@@ -8,6 +8,7 @@ Plug 'maxmellon/vim-jsx-pretty'         " js / jsx
 Plug 'ianks/vim-tsx'                    " tsx
 Plug 'jparise/vim-graphql'              " graphql
 Plug 'tpope/vim-fireplace'               " clojure 
+Plug 'Olical/conjure', {'tag': 'v3.3.0'}
 Plug 'venantius/vim-cljfmt'             
 Plug 'reasonml-editor/vim-reason-plus'  " reasonml
 " Bracket and parens
