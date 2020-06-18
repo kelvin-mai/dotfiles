@@ -8,10 +8,6 @@ vnoremap > >gv
 " Quit
 nnoremap q :q<CR>
 
-" Simulate same TAB behavior in VSCode
-nmap <Tab> :Tabnext<CR>
-nmap <S-Tab> :Tabprev<CR>
-
 " Simulate show documentation
 nmap K :call VSCodeNotify('editor.action.showHover')<CR>
 
@@ -20,6 +16,9 @@ xmap gc  <Plug>VSCodeCommentary
 nmap gc  <Plug>VSCodeCommentary
 omap gc  <Plug>VSCodeCommentary
 nmap gcc <Plug>VSCodeCommentaryLine
+
+" Toggle side bar
+nmap <space>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
 " Make calva act like fireplace
 nmap cqp :call VSCodeNotify('calva.jackIn')<CR>
