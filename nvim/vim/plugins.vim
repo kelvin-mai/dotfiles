@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 	
 " Syntax highlighting
+Plug 'haishanh/night-owl.vim'           " night owl theme
 Plug 'sheerun/vim-polyglot'             " default syntax
 Plug 'pangloss/vim-javascript'          " javascript
 Plug 'leafgarland/typescript-vim'       " typescript 

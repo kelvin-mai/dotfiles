@@ -1,3 +1,3 @@
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'nightowl',
       \}

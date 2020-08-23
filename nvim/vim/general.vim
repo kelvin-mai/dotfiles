@@ -5,7 +5,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 syntax enable                           " Enables syntax highlighing
 set termguicolors                       " Enable vim colors
-color dracula                           " Set colorscheme to dracula
+colorscheme night-owl                           " Set colorscheme to dracula
 filetype plugin indent on               " Enable file type detection and do language-dependent indenting
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
