@@ -8,8 +8,7 @@ Plug 'leafgarland/typescript-vim'       " typescript
 Plug 'maxmellon/vim-jsx-pretty'         " js / jsx 
 Plug 'ianks/vim-tsx'                    " tsx
 Plug 'jparise/vim-graphql'              " graphql
-Plug 'tpope/vim-fireplace'               " clojure 
-Plug 'Olical/conjure', {'tag': 'v3.3.0'}
+Plug 'Olical/conjure', {'tag': 'v3.3.0'} " clojure
 Plug 'venantius/vim-cljfmt'             
 Plug 'reasonml-editor/vim-reason-plus'  " reasonml
 " Bracket and parens
@@ -22,10 +21,8 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
-" File tree explorer
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 " Intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } } 
+Plug 'neoclide/coc.nvim', {'branch': 'release' } 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Emacs which keys

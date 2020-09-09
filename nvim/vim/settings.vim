@@ -10,6 +10,5 @@ source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/prettier.vim
 source $HOME/.config/nvim/plugins/rainbow.vim
-source $HOME/.config/nvim/plugins/rnvimr.vim
 source $HOME/.config/nvim/plugins/fzf.vim
 source $HOME/.config/nvim/plugins/whichkey.vim
