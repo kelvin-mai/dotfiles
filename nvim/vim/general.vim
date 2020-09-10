@@ -5,7 +5,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 syntax enable                           " Enables syntax highlighing
 set termguicolors                       " Enable vim colors
-colorscheme night-owl                           " Set colorscheme to dracula
+colorscheme night-owl                   " Set colorscheme to dracula
 filetype plugin indent on               " Enable file type detection and do language-dependent indenting
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
@@ -35,10 +35,10 @@ set showtabline=2                       " Always show tabs
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
-set timeoutlen=1000                      " By default timeoutlen is 1000 ms
+set timeoutlen=1000                     " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-"set autochdir                           " Your working directory will always be the same as your working directory
+"set autochdir                          " Your working directory will always be the same as your working directory
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
