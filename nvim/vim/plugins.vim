@@ -1,12 +1,12 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 	
 " Syntax highlighting
-Plug 'haishanh/night-owl.vim'             " night owl theme
+Plug 'kjssad/quantum.vim'                 " firefox theme
 Plug 'sheerun/vim-polyglot'               " default syntax
 Plug 'pangloss/vim-javascript'            " javascript
 Plug 'leafgarland/typescript-vim'         " typescript 
 Plug 'maxmellon/vim-jsx-pretty'           " js / jsx 
-Plug 'ianks/vim-tsx'                      " tsx
+Plug 'peitalin/vim-jsx-typescript'        " tsx
 Plug 'jparise/vim-graphql'                " graphql
 Plug 'Olical/conjure', {'tag': 'v3.3.0'}  " clojure
 Plug 'venantius/vim-cljfmt'             
