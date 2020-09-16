@@ -28,7 +28,7 @@ secondary = #ffb86c
 alert = #bd93f9
 
 [bar/master]
-;monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 30
 ;offset-x = 1%
@@ -81,7 +81,7 @@ modules-right = date
 
 [bar/left]
 inherit = bar/master
-monitor = DVI-D-0
+monitor = DP-3
 
 modules-right = filesystem
 

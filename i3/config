@@ -3,7 +3,7 @@
 
 # monitors
 set $primary HDMI-0
-set $secondary DVI-D-0
+set $secondary DP-3
 
 workspace 1 output $primary
 workspace 2 output $primary
@@ -43,7 +43,7 @@ font xft:Ubuntu Mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $HOME/.i3/i3pwd.sh
+bindsym $mod+Return exec $HOME/.config/i3/i3pwd.sh
 
 # start a browser
 bindsym $mod+Shift+Return exec default_browser
@@ -62,11 +62,11 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+exec --no-startup-id volumeicon
+bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+# exec --no-startup-id start-pulseaudio-x11
+# exec --no-startup-id pa-applet
+# bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -82,7 +82,7 @@ bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+bindsym $mod+Ctrl+t exec --no-startup-id picom --experimental-backends -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -210,9 +210,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
-assign [class="kdenlive"] $ws8
-assign [class="obs"] $ws9
-assign [class="Thunderbird"] $ws0
+assign [class="kdenlive"] $ws3
+assign [class="obs"] $ws4
+assign [class="Thunderbird"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -243,6 +243,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title="Android Emulator - pixel2:5554"] floating enable
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -297,7 +298,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom --experimental-backends -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -307,7 +308,7 @@ exec --no-startup-id thunderbird
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id ~/.i3/polybar.sh
+exec_always --no-startup-id $HOME/.config/i3/polybar.sh
 exec --no-startup-id i3-sensible-terminal
 
 # Theme colors
