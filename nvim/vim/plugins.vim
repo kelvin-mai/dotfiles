@@ -1,5 +1,5 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
-	
+
 " Syntax highlighting
 Plug 'kjssad/quantum.vim'                 " firefox theme
 Plug 'sheerun/vim-polyglot'               " default syntax
@@ -11,6 +11,7 @@ Plug 'jparise/vim-graphql'                " graphql
 Plug 'Olical/conjure', {'tag': 'v3.3.0'}  " clojure
 Plug 'venantius/vim-cljfmt'             
 Plug 'reasonml-editor/vim-reason-plus'    " reasonml
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Bracket and parens
 Plug 'chun-yang/auto-pairs'               " automatic paren completion
 Plug 'luochen1990/rainbow'                " rainbow parens
