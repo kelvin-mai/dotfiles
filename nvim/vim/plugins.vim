@@ -9,9 +9,12 @@ Plug 'maxmellon/vim-jsx-pretty'           " js / jsx
 Plug 'peitalin/vim-jsx-typescript'        " tsx
 Plug 'jparise/vim-graphql'                " graphql
 Plug 'Olical/conjure', {'tag': 'v3.3.0'}  " clojure
-Plug 'venantius/vim-cljfmt'             
 Plug 'reasonml-editor/vim-reason-plus'    " reasonml
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang
+" Project root
+Plug 'airblade/vim-rooter'
+" Git 
+Plug 'airblade/vim-gitgutter'
 " Bracket and parens
 Plug 'chun-yang/auto-pairs'               " automatic paren completion
 Plug 'luochen1990/rainbow'                " rainbow parens
@@ -21,7 +24,6 @@ Plug 'tpope/vim-commentary'
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release' } 
 " Emacs which keys
