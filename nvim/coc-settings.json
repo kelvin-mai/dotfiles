@@ -15,10 +15,16 @@
   ],
   // explorer
   "explorer": {
-    "file.showHiddenFiles": true
+    "file.showHiddenFiles": true,
+    "icon.enableNerdfont": true,
+    "previewAction.onHover": false,
+    "keyMappings.global": {
+      "D": "deleteForever"
+    }
   },
-  // clojure
+  // custom language servers
   "languageserver": {
+    // clojure
     "clojure-lsp": {
       "command": "bash",
       "args": ["-c", "clojure-lsp"],
@@ -29,6 +35,13 @@
       "initializationOptions": {
         "ignore-classpath-directories": true
       }
+    },
+    // terraform
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
     }
   },
   // python config

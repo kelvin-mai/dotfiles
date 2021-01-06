@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export HOME="/home/kelvin"
+# export HOME="/home/kelvinm"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -104,13 +104,26 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias .zsh='nvim $HOME/.zshrc'
 alias src='source $HOME/.zshrc'
-alias rangers='source ranger'
+alias ranger='source ranger'
 alias vim='nvim'
 alias cdp='cd $HOME/dev/projects'
 alias cdt='cd $HOME/dev/tutorials'
 
 export PATH="$HOME/scripts:$PATH"
+
+# Nodejs
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+# Golang
+export PATH="$HOME/go/bin:$PATH"
+
+# Android
+export ANDROID_SDK_ROOT="/opt/android-sdk"
+export ANDROID_HOME="/opt/android-sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin/"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 # Flutter
 export PATH="$HOME/flutter/bin:$PATH"
@@ -123,3 +136,6 @@ export ASPNETCORE_ENVIRONMENT=Development
 # deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"
