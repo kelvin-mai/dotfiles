@@ -11,7 +11,7 @@ source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/rainbow.vim
 source $HOME/.config/nvim/plugins/fzf.vim
 source $HOME/.config/nvim/plugins/whichkey.vim
-source $HOME/.config/nvim/plugins/golang.vim
 source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/markdown-preview.vim
-source $HOME/.config/nvim/plugins/lang-keys.vim
+source $HOME/.config/nvim/plugins/lang-config.vim
+

@@ -11,7 +11,9 @@
     "typescript",
     "javascriptreact",
     "typescriptreact",
-    "reason"
+    "reason",
+    "clojure",
+    "go"
   ],
   // explorer
   "explorer": {
@@ -19,7 +21,9 @@
     "icon.enableNerdfont": true,
     "previewAction.onHover": false,
     "keyMappings.global": {
-      "D": "deleteForever"
+      "D": "deleteForever",
+      "v": "open:vsplit",
+      "t": "open:tab"
     }
   },
   // custom language servers
@@ -43,6 +47,10 @@
       "initializationOptions": {},
       "settings": {}
     }
+  },
+  // golang
+  "go.goplsOptions": {
+    "gofumpt": true
   },
   // python config
   "python.linting.enabled": true,

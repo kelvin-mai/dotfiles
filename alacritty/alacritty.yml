@@ -51,7 +51,6 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-
   # Scroll to the bottom when new text is written to the terminal.
   # auto_scroll: true
 
@@ -93,7 +92,7 @@ font:
   #style: Italic
 
   # Point size
-  size: 12.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -127,47 +126,39 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Quantum Colors (Firefox devtools)
+# Colors (Night Owl by Sarah Drasner)
 colors:
   # Default colors
   primary:
-    background: "0x2a2a2e"
-    foreground: "0xD7D7DB"
+    background: "0x011627"
+    foreground: "0xd6deeb"
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: "0x2a2a2e"
-    cursor: "0x75BFFF"
+    text: "0xffffff"
+    cursor: "0x7e57c2"
 
   # Normal colors
   normal:
-    black: "0x2a2a2e"
-    red: "0xEB5368"
-    green: "0x87DE74"
-    yellow: "0xFFD866"
-    blue: "0x6B89FF"
-    magenta: "0xB98EFF"
-    cyan: "0x75BFFF"
-    white: "0xD7D7DB"
+    black: "0x000000"
+    red: "0xef5350"
+    green: "0x22da6e"
+    yellow: "0xaddb67"
+    blue: "0x82aaff"
+    magenta: "0xc792ea"
+    cyan: "0x21c7a8"
+    white: "0xffffff"
 
   # Bright colors
   bright:
-    black: "0x737373"
-    red: "0xFF7DE9"
-    green: "0x87DE74"
-    yellow: "0xFFD866"
-    blue: "0x6B89FF"
-    magenta: "0xB98EFF"
-    cyan: "0x75BFFF"
-    white: "0x939295"
-
-  indexed_colors: []
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+    black: "0x575656"
+    red: "0xef5350"
+    green: "0x22da6e"
+    yellow: "0xffeb95"
+    blue: "0x82aaff"
+    magenta: "0xc792ea"
+    cyan: "0x7fdbca"
+    white: "0xffffff"
 
 # Mouse bindings
 #
@@ -184,6 +175,7 @@ background_opacity: 1.0
 #
 # All available `mods` and `action` values are documented in the key binding
 # section.
+
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
