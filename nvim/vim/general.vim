@@ -3,9 +3,13 @@ let g:mapleader = "\<Space>"
 " set vim true colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1       
 
+let g:embark_terminal_italics=1
+let g:gh_color="soft"
+let g:github_colors_soft=1
+
 syntax enable                           " Enables syntax highlighing
 set termguicolors                       " Enable vim colors
-colorscheme night-owl                   " Set colorscheme to night-owl
+colorscheme embark                    " Set colorscheme to nightfly
 filetype plugin indent on               " Enable file type detection and do language-dependent indenting
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line

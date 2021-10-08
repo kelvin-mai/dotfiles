@@ -116,9 +116,11 @@ let g:coc_global_extensions = [
       \ 'coc-html',
       \ 'coc-html-css-support',
       \ 'coc-json',
+      \ 'coc-omnisharp',
       \ 'coc-prettier', 
       \ 'coc-python',
       \ 'coc-sql',
+      \ 'coc-tailwindcss',
       \ 'coc-tsserver',
       \ 'coc-vimlsp'
       \]

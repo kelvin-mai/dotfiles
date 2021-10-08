@@ -19,3 +19,6 @@ let g:signify_sign_show_text = 1
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
 " highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 " highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+highlight SignifySignAdd    guifg=#A1EFD3
+highlight SignifySignDelete guifg=#F48FB1
+highlight SignifySignChange guifg=#ffe6b3

@@ -15,3 +15,5 @@
   cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
 [difftool]
 	prompt = false
+[pull]
+	rebase = false

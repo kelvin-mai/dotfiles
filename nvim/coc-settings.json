@@ -57,5 +57,7 @@
   "python.linting.pylintEnabled": true,
   // javascript and typescript config
   "tsserver.enable": true,
-  "tsserver.enableJavascript": true
+  "tsserver.enableJavascript": true,
+  // set postgresql as default sql
+  "sql.database": "postgresql"
 }

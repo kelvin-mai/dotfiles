@@ -12,7 +12,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.6 } }
+let g:fzf_layout = {'window': { 'width': 0.99, 'height': 0.4, 'xoffset': 1, 'yoffset': 1, 'border': 'horizontal' } }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"

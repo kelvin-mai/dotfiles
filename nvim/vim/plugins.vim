@@ -1,11 +1,11 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Syntax colorschemes
-Plug 'kjssad/quantum.vim'                                                " firefox theme
 Plug 'romgrk/doom-one.vim'                                               " emacs doom theme
 Plug 'joshdick/onedark.vim'                                              " atom one dark theme
 Plug 'haishanh/night-owl.vim'                                            " night-owl theme
-Plug 'wojciechkepka/vim-github-dark'                                     " github dark theme
+Plug 'bluz71/vim-nightfly-guicolors'                                     " nightfly theme
+Plug 'embark-theme/vim', { 'as': 'embark' }
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'                                              " better default syntax
 Plug 'pangloss/vim-javascript'                                           " javascript
@@ -15,7 +15,7 @@ Plug 'jparise/vim-graphql'                                               " graph
 Plug 'Olical/conjure', {'tag': 'v3.3.0'}                                 " clojure REPL integration
 Plug 'reasonml-editor/vim-reason-plus'                                   " reasonml
 " Editor features
-Plug 'chun-yang/auto-pairs'                                              " automatic paren completion
+Plug 'jiangmiao/auto-pairs'                                              " automatic paren/quote completion
 Plug 'luochen1990/rainbow'                                               " rainbow parens
 Plug 'tpope/vim-surround'                                                " add command to create surrounding parens
 Plug 'tpope/vim-commentary'                                              " comments

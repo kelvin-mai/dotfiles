@@ -4,12 +4,20 @@
 echo "$HOME" > /tmp/whereami
 nm-applet &
 nitrogen --restore &
+
 .config/polybar/launch.sh &
 picom --experimental-backends &
+lxpolkit &
+thunderbird &
+
+xsetroot -cursor_name left_ptr
+xset -dpms
+xset s off
 
 pgrep -x sxhkd > /dev/null || sxhkd -m -1 &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor HDMI-0 -d 1 2 3 4 5
+bspc monitor DP-3 -d 6 7 8 9 10
 
 bspc config border_width          2
 bspc config window_gap            12
@@ -21,6 +29,8 @@ bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
+bspc rule -a Thunderbird desktop='^5'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+

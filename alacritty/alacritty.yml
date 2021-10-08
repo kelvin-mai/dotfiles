@@ -92,7 +92,7 @@ font:
   #style: Italic
 
   # Point size
-  size: 16.0
+  size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -126,39 +126,74 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Night Owl by Sarah Drasner)
-colors:
-  # Default colors
-  primary:
-    background: "0x011627"
-    foreground: "0xd6deeb"
+schemes:
+  embark: &embark
+    primary:
+      background: "0x1e1c31"
+      foreground: "0xcbe3e7"
+    cursor:
+      text: "0x1e1c31"
+      cursor: "0xa1efd3"
+    normal:
+      black: "0x1e1c31"
+      red: "0xf48fb1"
+      green: "0xa1efd3"
+      yellow: "0xffe6b3"
+      blue: "0x91ddff"
+      magenta: "0xd4bfff"
+      cyan: "0x87dfeb"
+      white: "0xcbe3e7"
+    bright:
+      black: "0x585273"
+      red: "0xf02e6e"
+      green: "0x62d196"
+      yellow: "0xf2b482"
+      blue: "0x65b2ff"
+      magenta: "0xa37acc"
+      cyan: "0x63f2f1"
+      white: "0x8a889d"
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: "0xffffff"
-    cursor: "0x7e57c2"
+colors: *embark
 
-  # Normal colors
-  normal:
-    black: "0x000000"
-    red: "0xef5350"
-    green: "0x22da6e"
-    yellow: "0xaddb67"
-    blue: "0x82aaff"
-    magenta: "0xc792ea"
-    cyan: "0x21c7a8"
-    white: "0xffffff"
+# Colors (Nightfly)
+# colors:
+#   # Default colors
+#   primary:
+#     background: "#011627"
+#     foreground: "#acb4c2"
+#     bright_foreground: "#eeeeee"
 
-  # Bright colors
-  bright:
-    black: "0x575656"
-    red: "0xef5350"
-    green: "0x22da6e"
-    yellow: "0xffeb95"
-    blue: "0x82aaff"
-    magenta: "0xc792ea"
-    cyan: "0x7fdbca"
-    white: "0xffffff"
+#   # Cursor colors
+#   cursor:
+#     text: "#080808"
+#     cursor: "#9ca1aa"
+
+#   # Selection colors
+#   selection:
+#     text: "#080808"
+#     background: "#b2ceee"
+
+#   # Normal colors
+#   normal:
+#     black: "#1d3b53"
+#     red: "#fc514e"
+#     green: "#a1cd5e"
+#     yellow: "#e3d18a"
+#     blue: "#82aaff"
+#     magenta: "#c792ea"
+#     cyan: "#7fdbca"
+#     white: "#a1aab8"
+
+#   # Bright colors
+#   bright:
+#     black: "#7c8f8f"
+#     red: "#ff5874"
+#     green: "#21c7a8"
+#     yellow: "#ecc48d"
+#     blue: "#82aaff"
+#     magenta: "#ae81ff"
+#     cyan: "#7fdbca"
+#     white: "#d6deeb"
 
 # Mouse bindings
 #
@@ -190,28 +225,6 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux) xdg-open
-    #   - (Windows) explorer
-    #launcher:
-    #  program: xdg-open
-    #  args: []
-
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    modifiers: None
 
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
