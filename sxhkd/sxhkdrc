@@ -12,7 +12,7 @@ super + shift + Return
 
 # program launcher
 super + d
-	rofi -modi drun -show drun -theme kelvin
+	rofi -modi drun -show drun -theme embark
 
 # make sxhkd reload its configuration files:
 super + Escape

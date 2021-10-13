@@ -9,5 +9,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export TERMINAL=/usr/bin/alacritty
-export BROWSER=/usr/bin/brave-browser
+export BROWSER=/usr/bin/firefox
 export EDITOR=/usr/bin/nvim

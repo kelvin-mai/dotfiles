@@ -2,7 +2,7 @@
 
 ## bootstrap 
 echo "$HOME" > /tmp/whereami
-nm-applet &
+# nm-applet &
 nitrogen --restore &
 
 .config/polybar/launch.sh &
@@ -21,7 +21,7 @@ bspc monitor DP-3 -d 6 7 8 9 10
 
 bspc config border_width          2
 bspc config window_gap            12
-bspc config focused_border_color  '#00BCD4'
+bspc config focused_border_color  '#91DDFF'
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
