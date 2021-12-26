@@ -7,6 +7,8 @@ precmd() { eval "pwd > /tmp/whereami" }
 
 # enhancements
 alias ls='lsd -hA --group-dirs first'
+alias ll='lsd -lhA --group-dirs first'
+alias l='lsd -lhA --group-dirs first'
 alias vim='nvim'
 alias lg='lazygit'
 alias grep='grep --color=auto'

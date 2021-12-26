@@ -1,3 +1,6 @@
 nvim/autoload/plugged/*
 nvim/.lsp/
 nvim/.netrwhist
+.clj-kondo/
+.cpcache/
+.lsp/

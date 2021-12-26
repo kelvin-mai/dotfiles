@@ -8,20 +8,11 @@ autocmd FileType clojure nnoremap <buffer> <localleader>a[ vi[<c-v>$:EasyAlign\ 
 autocmd FileType clojure nnoremap <buffer> <localleader>a{ vi{<c-v>$:EasyAlign\ g/^\S/<cr>gv=
 " disable auto pairs on ' and `
 autocmd Filetype clojure let b:AutoPairs={'(':')', '[':']', '{':'}','"':'"'}
-" conjure enable AnsiEsc (interpret ANSI escape codes) for the Conjure log buffer.
-" autocmd BufEnter conjure-log-* AnsiEsc
 " conjure configs
-let g:conjure#log#botright = 1
-let g:conjure#log#hud#height = 1.0
-let g:conjure#eval#comment_prefix = ";; "
-let g:conjure#eval#def_word = v:false
-let g:conjure#eval#doc_word = v:false
-let g:conjure#eval#gsubs = {'do-comment': ['^%(comment[%s%c]', '(do ']}
-let g:conjure#client#clojure#nrepl#test#current_form_names = ['deftest', 'defexpect']
-let g:conjure#client#clojure#nrepl#connection#auto_repl#hidden = v:true
-let g:conjure#client#clojure#nrepl#eval#raw_out = v:true
-let g:conjure#highlight#enabled = 1
-let g:conjure#highlight#timeout = 250
+let g:conjure_config = {
+      \'mappings.doc-word': '',
+      \'mappings.def-word': ''
+      \}
 
 " Golang
 autocmd FileType go nmap <localleader>b :<C-u>call <SID>build_go_files()<CR>

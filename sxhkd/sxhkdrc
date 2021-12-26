@@ -42,7 +42,7 @@ super + {_,shift + }q
 # requires bsp-layout, get using below command
 # curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
 super + m
-	bsp-layout cycle --layouts tiled,tall,monocle,wide
+	bsp-layout cycle --layouts tiled,tall,wide
 
 # send the newest marked node to the newest preselected node
 super + y

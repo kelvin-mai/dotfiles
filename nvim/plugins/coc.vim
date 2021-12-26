@@ -112,6 +112,7 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-emmet',
       \ 'coc-explorer', 
+      \ 'coc-db',
       \ 'coc-go',
       \ 'coc-html',
       \ 'coc-html-css-support',
@@ -119,7 +120,6 @@ let g:coc_global_extensions = [
       \ 'coc-omnisharp',
       \ 'coc-prettier', 
       \ 'coc-python',
-      \ 'coc-sql',
       \ 'coc-tailwindcss',
       \ 'coc-tsserver',
       \ 'coc-vimlsp'

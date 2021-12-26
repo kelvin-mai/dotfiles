@@ -15,6 +15,7 @@
     "clojure",
     "go"
   ],
+  "coc.preferences.extensionUpdateCheck": "daily",
   // explorer
   "explorer": {
     "file.showHiddenFiles": true,

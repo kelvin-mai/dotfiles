@@ -1,16 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# zsh plugins
-export ZSHDIR=$HOME/.config/zsh
-source $ZSHDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-source $ZSHDIR/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
-source $ZSHDIR/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh 2>/dev/null
-source $ZSHDIR/ssh-agent.plugin.zsh 2>/dev/null
-source $ZSHDIR/command-not-found.plugin.zsh 2>/dev/null
-source $ZSHDIR/dracula/lib/async.zsh 2>/dev/null
-source $ZSHDIR/dracula/dracula.zsh-theme 2>/dev/null
-
 # Enable colors and change prompt:
 autoload -U colors && colors
 
@@ -19,7 +9,17 @@ setopt histignorealldups sharehistory
 # History in cache directory:
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.cache/zsh_history
+
+# ZSH Plugins
+export ZSHDIR=$HOME/.config/zsh
+source $ZSHDIR/ssh-agent.plugin.zsh 2>/dev/null
+source $ZSHDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
+source $ZSHDIR/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
+source $ZSHDIR/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh 2>/dev/null
+source $ZSHDIR/command-not-found.plugin.zsh 2>/dev/null
+source $ZSHDIR/dracula/lib/async.zsh 2>/dev/null
+source $ZSHDIR/dracula/dracula.zsh-theme 2>/dev/null
 
 # Use modern completion system
 autoload -Uz compinit
@@ -58,3 +58,5 @@ source $ZSHDIR/alias.sh 2>/dev/null
 export JAVA_HOME=/opt/jdk-17+35
 export PATH=$PATH:$JAVA_HOME/bin
 
+# JavaScript
+export PATH=$PATH:$HOME/.npm-global/bin
